@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Paint</title>
+    <link href="~/Styles/CursoMJ.css" rel="stylesheet" />
+</head>
+<body>
+    <div>
+        <div class="Titulo">Demo 49: Paint con Canvas con Imagen de Fondo</div>
+        <div class="Subtitulo">Configuracion del Grafico</div>
+        <table>
+            <tr>
+                <input type="date" id="fecha" />
+            </tr>
+            <tr>
+                <td style="width:30%">Usuario:</td>
+                <td style="width:15%">Color:</td>
+                <td style="width:15%">Grosor:</td>
+                <td style="width:40%"></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" id="txtUsuario" style="width:200px" />
+                </td>
+                <td>
+                    <input type="color" id="txtColor" style="width:100px" />
+                </td>
+                <td>
+                    <input type="number" id="txtGrosor" style="width:50px" value="20" />
+                </td>
+                <td>
+                    <button id="btnLimpiarDibujo" class="BotonL">Limpiar Dibujo</button>
+                    <button id="btnCambiarFondo" class="BotonL">Cambiar Fondo</button>
+                    <button id="btnGrabarCliente" class="BotonL">Grabar Cliente</button>
+                    <button id="btnGrabarServidor" class="BotonL">Grabar Servidor</button>
+                </td>
+            </tr>
+        </table>
+        <input type="file" id="fupFondo" style="display:none"/>
+        <canvas id="canvas" width="1600" height="900" style="cursor:pointer"></canvas>
+    </div>
+    <input id="hdfRaiz" type="hidden" value='@Url.Content("~")'/>
+    <script src="~/Scripts/General.js"></script>
+    <script src="~/Scripts/Paint.js"></script>
+</body>
+</html>
